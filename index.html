@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tintarte - Home</title>
+
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+        #menu_cabecalho{
+            position: fixed;
+            display: flex;
+            top: 0;
+            width: 100%;
+            height: 100px;
+            border-bottom: 3px solid rgb(23, 27, 248);
+            box-shadow: 0 0 20px 0px black;
+            justify-content: center;
+            z-index: 5;
+            background-color: white;
+        }
+        #logo{
+            display: flex;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 20%;
+            height: 100px;
+        }
+        #icones{
+            position: fixed;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            top: 0;
+            right: 0;
+            width: 20%;
+            height: 100px;
+        }
+        #logo>img{
+            margin: auto;
+            width: 120px;
+            height: 97px;
+        }
+        #opcoes{
+            width: 60%;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+        #opcoes :nth-child(1){
+            background-color: rgba(43, 43, 243, 0.8);
+            color: white;
+        }
+        #opcoes>div{
+            border-radius: 10px;
+            padding: 5px;
+            font-weight: bold
+        }
+        #opcoes>div:hover{
+            background-color: rgba(43, 43, 243, 0.8);
+            color: white;
+            cursor: pointer;
+        }
+        #icones>div>img{
+            height: 70%;
+            width: 70%;
+            cursor: pointer;
+        }
+        .layout_principal{
+            position: relative;
+            display: flex;
+            top: 120px;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            background-color: white;
+            justify-content: center;
+        }
+        .container{
+            display: grid;
+            grid-template-areas: 
+            "banner"
+            "pincel"
+            "titulo_p"
+            "produtos"
+            "titulo"
+            "noticias"
+            "contatos"
+            ;
+            grid-template-rows: 3fr 0.5fr 1fr 5fr 1fr 3fr 2fr;
+        }
+        .box, #box4, #titulo_produto{
+            display: flex;
+            justify-content: center;
+        }
+        #titulo_produto{
+            grid-area: titulo_p;
+            background-color: rgb(212, 212, 212);
+            align-items: center;
+        }
+        #box1{
+            grid-area: banner;
+        }
+        #box2{
+            grid-area: pincel;
+            display: flex;
+            align-items: center;
+            justify-content: start;
+            width: 100svw;
+        }
+        #box3{
+            grid-area: produtos;
+            background-color: rgb(212, 212, 212);
+        }
+        #box4{
+            grid-area: titulo;
+            align-items: center;
+            background-color: white;
+        }
+        #box5{
+            grid-area: noticias;
+        }
+        #box6{
+            grid-area: contatos;
+            background-color: rgba(77, 88, 252, 0.5);
+            width: 100%;
+        }
+        #container_banner{
+            display: flex;
+            height: 400px;
+            width: 900px;
+        }
+        .imagens_banner{
+            border-radius: 20px;
+            height: 100%;
+            width: 100px;
+            margin: auto;
+            overflow: hidden;
+            transition: all 1s ease-in-out;
+        }
+        .imagens_banner:nth-child(2){
+            width: 650px;
+        }
+        .imagens_banner img{
+            width: 650px;
+            height: 400px;
+        }
+        .imagens_banner:hover{
+            width: 650px;
+            box-shadow: 0 0 15px 0 black;
+            z-index: 5;
+        }
+        #tinta_pincel{
+            height: 20px;
+            background: linear-gradient(to bottom, green, rgb(36, 204, 21));
+            animation: pintando 15s ease-in-out infinite;
+            box-shadow: 0 0 5px 1px green;
+        }
+        #pincel{
+            height: 100px;
+            width: 100px;
+            transform: translate(-15px, -3px) rotate(15deg);
+        }
+        @keyframes pintando {
+            0%{
+                width: 0px;
+                opacity: 0;
+            }
+            5%{
+                opacity: 1;
+            }
+            95%{
+                opacity: 1;
+            }
+            100%{
+                width: 120vw;
+                opacity: 0;
+            }
+        }
+        .produtos{
+            width: 920px;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+        }
+        .box_produtos{
+            display: flex;
+            border-radius: 10px;
+            width: 200px;
+            height: 300px;
+            margin: auto;
+            box-shadow: 0 0 10px 0 black;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+            background-color: rgb(255, 255, 255);
+        }
+        .box_produtos:hover{
+            width: 210px;
+            height: 310px;
+        }
+        .infos, .adicionar, .img_produto{
+            border-radius: 10px;
+            width: calc(100% - 10px);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .img_produto{
+            height: calc(60% - 8px);
+            background-color: gainsboro;
+        }
+        .infos{
+            height: calc(25% - 8px);
+            flex-direction: column;
+        }
+        .adicionar{
+            height: calc(10% - 8px);
+            box-shadow: 0 0 3px 0 black;
+            background-color: rgba(173, 255, 47, 0.8);
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .adicionar:hover{
+            background-color: rgba(127, 207, 6, 0.8);
+        }
+        .box_produtos img{
+            width: 80%;
+            height: 80%;
+        }
+        .infos :first-child{
+            font-weight: bold;
+            font-size: large;
+            margin-bottom: 10px;
+        }
+        .infos :last-child{
+            font-size: small;
+        }
+        
+        .container_noticia{
+            width: 920px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+        }
+        .noticias{
+            display: flex;
+            border-radius: 10px;
+            width: 250px;
+            height: 350px;
+            margin: auto;
+            box-shadow: 0 0 10px 0 black;
+            overflow: hidden;
+            justify-content: center;
+            background-color: white;
+            flex-direction: column;
+        }
+        .img_noticia{
+            height: 60%;
+            width: 100%;
+        }
+        .info_noticia{
+            height: 40%;
+            width: 100%;
+            background-color: white;
+            text-align: center;
+        }
+        .noticias:hover{
+            width: 260px;
+            height: 360px;
+        }
+        #contato_box6{
+            width: 920px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #contato_box6 :first-child{
+            display: flex;
+            justify-content: space-around;
+            height: 97%;
+            width: 50%;
+            border-radius: 50%;
+        }
+        #contato_box6 :nth-child(2){
+            text-align: center;
+            width: 50%;
+        }
+        
+    </style>
+
+</head>
+<body>
+    <div id="menu_cabecalho">
+        <div id="logo"><img src="imagens/Logo_tintarte.png" alt="logo_tintarte"></div>
+        <div id="icones">
+            <div id="whats"><img src="imagens/logo_whats.png" alt="logo_whats"></div>
+            <div id="carrinho"><img src="imagens/Carrinho.png" alt="carrinho"></div>
+        </div>
+        <div id="opcoes">
+            <div>Tintas Exclusivas</div>
+            <div>Institucional</div>
+            <div>Produtos</div>
+            <div>Contato</div>
+        </div>
+    </div>
+    <div class="layout_principal">
+        <div class="container">
+            <div class="box" id="box1">
+                <div id="container_banner">
+                    <div class="imagens_banner">
+                        <div><img src="imagens/img_tintas1.jpg" alt="tintas1"></div>
+                    </div>
+                    <div class="imagens_banner">
+                        <div><img src="imagens/Banner_inicial.png" alt="Banner_inicial"></div>
+                    </div>
+                    <div class="imagens_banner">
+                        <div><img src="imagens/img_tintas2.jfif" alt="tintas2"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="box" id="box2">
+                <div id="tinta_pincel"></div>
+                <div id="pincel"><img id="pincel" src="imagens/pincel.png" alt="pincel"></div>
+            </div>
+            <div id="titulo_produto">
+                <div><h1>Conheça Nossos Produtos Exclusivos</h1></div>
+            </div>
+            <div class="box" id="box3">
+                <div class="produtos">
+                    <div class="box_produtos">
+                        <div class="img_produto"><img src="imagens/lata_tinta_azul.png" alt="tinta_azul"></div>
+                        <div class="infos">
+                            <div>Tinta Reciclada 20L</div>
+                            <div>Qtd. Mínima 1 Unidade.</div>
+                        </div>
+                        <div class="adicionar"><div>COMPRAR</div></div>
+                    </div>
+                    <div class="box_produtos">
+                        <div class="img_produto"><img src="imagens/lata_tinta_amarelo.png" alt="lata_amarela"></div>
+                        <div class="infos">
+                            <div>Thinner Formulado 20L</div>
+                            <div>Qtd. Mínima 1 Unidade.</div>
+                        </div>
+                        <div class="adicionar"><div>COMPRAR</div></div>
+                    </div>
+                    <div class="box_produtos">
+                        <div class="img_produto"><img src="imagens/lata_tinta_azul.png" alt="tinta_azul"></div>
+                        <div class="infos">
+                            <div>Tinta Reciclada 20L</div>
+                            <div>Qtd. Mínima 1 Unidade.</div>
+                        </div>
+                        <div class="adicionar"><div>COMPRAR</div></div>
+                    </div>
+                    <div class="box_produtos">
+                        <div class="img_produto"><img src="imagens/lata_tinta_amarelo.png" alt="lata_amarela"></div>
+                        <div class="infos">
+                            <div>Thinner Formulado 20L</div>
+                            <div>Qtd. Mínima 1 Unidade.</div>
+                        </div>
+                        <div class="adicionar"><div>COMPRAR</div></div>
+                    </div>
+                    <div class="box_produtos">
+                        <div class="img_produto"><img src="imagens/lata_tinta_azul.png" alt="tinta_azul"></div>
+                        <div class="infos">
+                            <div>Tinta Reciclada 20L</div>
+                            <div>Qtd. Mínima 1 Unidade.</div>
+                        </div>
+                        <div class="adicionar"><div>COMPRAR</div></div>
+                    </div>
+                    <div class="box_produtos">
+                        <div class="img_produto"><img src="imagens/lata_tinta_amarelo.png" alt="lata_amarela"></div>
+                        <div class="infos">
+                            <div>Thinner Formulado 20L</div>
+                            <div>Qtd. Mínima 1 Unidade.</div>
+                        </div>
+                        <div class="adicionar"><div>COMPRAR</div></div>
+                    </div>
+                    <div class="box_produtos">
+                        <div class="img_produto"><img src="imagens/lata_tinta_azul.png" alt="tinta_azul"></div>
+                        <div class="infos">
+                            <div>Tinta Reciclada 20L</div>
+                            <div>Qtd. Mínima 1 Unidade.</div>
+                        </div>
+                        <div class="adicionar"><div>COMPRAR</div></div>
+                    </div>
+                    <div class="box_produtos">
+                        <div class="img_produto"><img src="imagens/lata_tinta_amarelo.png" alt="lata_amarela"></div>
+                        <div class="infos">
+                            <div>Thinner Formulado 20L</div>
+                            <div>Qtd. Mínima 1 Unidade.</div>
+                        </div>
+                        <div class="adicionar"><div>COMPRAR</div></div>
+                    </div>
+                </div>
+            </div>
+            <div class="box" id="box4">
+                <div><h1>Confira as Últimas Notícias de Tintas no Brasil</h1></div>
+            </div>
+            <div class="box" id="box5">
+                <div class="container_noticia">
+                    <div class="noticias">
+                        <div class="img_noticia"><img src="imagens/floresta.webp" alt="floresta"></div>
+                        <div class="info_noticia">
+                            <h3>Ecologia e Tintas</h3>
+                            <p>Com foco na Ecologia e Princípio de Sustentabilidade, a Tintas Blumenau promove a reciclagem de Thinner, e Tintas. <a href="https://pt.wikipedia.org/wiki/Ecologia">Veja mais</a>.</p>
+                        </div>
+                    </div>
+                    <div class="noticias">
+                        <div class="img_noticia"><img src="imagens/deserto.webp" alt="deserto"></div>
+                        <div class="info_noticia">
+                            <h3>Ecologia e Tintas</h3>
+                            <p>Com foco na Ecologia e Princípio de Sustentabilidade, a Tintas Blumenau promove a reciclagem de Thinner, e Tintas. <a href="https://pt.wikipedia.org/wiki/Ecologia">Veja mais</a>.</p>
+                        </div>
+                    </div>
+                    <div class="noticias">
+                        <div class="img_noticia"><img src="imagens/pradaria.webp" alt="pradaria"></div>
+                        <div class="info_noticia">
+                            <h3>Ecologia e Tintas</h3>
+                            <p>Com foco na Ecologia e Princípio de Sustentabilidade, a Tintas Blumenau promove a reciclagem de Thinner, e Tintas. <a href="https://pt.wikipedia.org/wiki/Ecologia">Veja mais</a>.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="box" id="box6">
+                <div id="contato_box6">
+                    <div><img src="imagens/Logo_tintarte.png" alt="logo"></div>
+                    <div>
+                        <b></b>
+                        <b>Atendimento</b><br>
+                        <br>📞 Telefone fixo: (11) 3456-7890 <br>💬 WhatsApp: (11) 91234-5678 <br>📧 E-mail: contato@tintarte.com.br
+                        <br><br>
+                        <b>Localização</b><br>
+                        <br>Tintarte Tintas & Arte <br>Av. das Cores, 1234 – Bairro Paleta <br>Cidade Criativa – SP, 01234-567 <br>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+</body>
+</html>
