@@ -138,6 +138,8 @@
             justify-content: space-around;
             align-items: center;
             background-color: rgb(255, 255, 255);
+            cursor: pointer;
+            transition: all 0.5s ease;
         }
         .box_produtos:hover{
             width: 210px;
@@ -342,21 +344,21 @@
                         <div class="img_noticia"><img src="imagens/floresta.webp" alt="floresta"></div>
                         <div class="info_noticia">
                             <h3>Ecologia e Tintas</h3>
-                            <p>Com foco na Ecologia e Princípio de Sustentabilidade, a Tintas Blumenau promove a reciclagem de Thinner, e Tintas. <a href="https://pt.wikipedia.org/wiki/Ecologia">Veja mais</a>.</p>
+                            <p>Com foco na Ecologia e Princípio de Sustentabilidade, a Tintarte promove a reciclagem de Thinner, e Tintas. <a href="https://pt.wikipedia.org/wiki/Ecologia">Veja mais</a>.</p>
                         </div>
                     </div>
                     <div class="noticias">
                         <div class="img_noticia"><img src="imagens/deserto.webp" alt="deserto"></div>
                         <div class="info_noticia">
                             <h3>Ecologia e Tintas</h3>
-                            <p>Com foco na Ecologia e Princípio de Sustentabilidade, a Tintas Blumenau promove a reciclagem de Thinner, e Tintas. <a href="https://pt.wikipedia.org/wiki/Ecologia">Veja mais</a>.</p>
+                            <p>Com foco na Ecologia e Princípio de Sustentabilidade, a Tintarte promove a reciclagem de Thinner, e Tintas. <a href="https://pt.wikipedia.org/wiki/Ecologia">Veja mais</a>.</p>
                         </div>
                     </div>
                     <div class="noticias">
                         <div class="img_noticia"><img src="imagens/pradaria.webp" alt="pradaria"></div>
                         <div class="info_noticia">
                             <h3>Ecologia e Tintas</h3>
-                            <p>Com foco na Ecologia e Princípio de Sustentabilidade, a Tintas Blumenau promove a reciclagem de Thinner, e Tintas. <a href="https://pt.wikipedia.org/wiki/Ecologia">Veja mais</a>.</p>
+                            <p>Com foco na Ecologia e Princípio de Sustentabilidade, a Tintarte promove a reciclagem de Thinner, e Tintas. <a href="https://pt.wikipedia.org/wiki/Ecologia">Veja mais</a>.</p>
                         </div>
                     </div>
                 </div>
@@ -382,6 +384,7 @@
     <script>
         document.getElementById("botao_institucional").addEventListener("click", function() {window.location.href = "https://thiagoreinecke7.github.io/site-loja-tintas/institucional.html";})
         document.getElementById("botao_contato").addEventListener("click", function() {window.location.href = "https://thiagoreinecke7.github.io/site-loja-tintas/contato.html";})
+        document.querySelectorAll(".box_produtos").forEach(function (botao) {botao.addEventListener("click", function() {window.location.href = "https://thiagoreinecke7.github.io/site-loja-tintas/produto.html"})})
     </script>
     
 </body>

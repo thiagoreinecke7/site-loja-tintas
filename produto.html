@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produto</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        .layout_principal{
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            height: calc(100svh - 120px);
+        }
+        
+        #fundo_produto{
+            display: flex;
+            width: 100vw;
+            justify-content: center;
+            background-color: gainsboro;
+        }
+        #box_produto{
+            display: flex;
+            height: 450px;
+            width: 920px;
+            justify-content: center;
+            align-items: center;
+        }
+        #infos, #foto_produto, .adicionar{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        #infos{
+            text-align: center;
+            justify-content: space-between;
+            align-items: center;
+            height: 90%;
+            width: 50%;
+            padding: 10px;
+        }
+        #foto_produto{
+            align-items: center;
+            height: 90%;
+            width: 50%;
+            border-radius: 30px;
+            box-shadow: 0 0 10px 0;
+            background-color: white;
+        }
+        #foto_produto img{
+            width: 80%;
+            height: 80%;
+        }
+        .adicionar{
+            border-radius: 30px;
+            height: calc(10% - 8px);
+            width: 50%;
+            margin-bottom: 30px;
+            box-shadow: 0 0 3px 0 black;
+            background-color: rgba(173, 255, 47, 0.8);
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .adicionar:hover{
+            background-color: rgba(127, 207, 6, 0.8);
+            padding: 3px;
+            margin-bottom: 27px;
+        }
+        #mais_produtos{
+            display: flex;
+            width: 100svw;
+            justify-content: center;
+            
+        }
+        #box_mais_produtos{
+            display: flex;
+            width: 920px;
+            height: 400px;
+            justify-content: space-around;
+        }
+        .caixa{
+            margin: 20px 0;
+            width: 23%;
+            border-radius: 10px;
+            box-shadow: 0 0 10px 0 black;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+            background-color: rgb(255, 255, 255);
+            transition: all 0.5s ease;
+            cursor: pointer;
+        }
+        .caixa:hover{
+            margin: 15px 0 25px 0;
+        }
+
+        .infos_mais_produtos, .adicionar_mais_produtos, .img_produto{
+            border-radius: 10px;
+            width: calc(100% - 10px);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .img_produto{
+            height: calc(60% - 8px);
+            background-color: gainsboro;
+        }
+        .caixa img{
+            width: 80%;
+            height: 80%;
+        }
+        .infos_mais_produtos{
+            height: calc(25% - 8px);
+            flex-direction: column;
+        }
+        .infos_mais_produtos :first-child{
+            font-weight: bold;
+            font-size: large;
+            margin-bottom: 10px;
+        }
+        .adicionar_mais_produtos{
+            height: calc(10% - 8px);
+            box-shadow: 0 0 3px 0 black;
+            background-color: rgba(173, 255, 47, 0.8);
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .adicionar_mais_produtos:hover{
+            background-color: rgba(127, 207, 6, 0.8);
+        }
+
+
+        #box6{
+            display: flex;
+            justify-content: center;
+            background-color: rgba(77, 88, 252, 0.5);
+            width: 100svw;
+        }
+
+    </style>
+
+</head>
+<body>
+    <!--Definindo o cabeçalho e menu-->
+    <div id="menu_cabecalho">
+        <div id="logo"><img src="imagens/Logo_tintarte.png" alt="logo_tintarte"></div>
+        <div id="icones">
+            <div id="whats"><a href="https://web.whatsapp.com/"><img src="imagens/logo_whats.png" alt="logo_whats"></a></div>
+            <div id="carrinho"><img src="imagens/Carrinho.png" alt="carrinho"></div>
+        </div>
+        <div id="opcoes">
+            <div id="botao_tintas_exclusivas">Tintas Exclusivas</div>
+            <div id="botao_institucional">Institucional</div>
+            <div>Produtos</div>
+            <div id="botao_contato">Contato</div>
+        </div>
+    </div>
+
+    <div class="layout_principal">
+        <div id="fundo_produto">
+            <div id="box_produto">
+                <div id="foto_produto"><img src="imagens/lata_tinta_azul.png" alt="tinta_azul"></div>
+                <div id="infos">
+                    <div>
+                        <h2>Tinta Reciclada 20 Litros</h2>
+                        <p>Tinta Reciclada: Revestimento de cor variável, aspecto brilhante, semi-brilhante ou fosco, aderente e de alta cobertura. Indicado para pintura de máquinas, estruturas metálicas, concretos, alumínio, azulejos, entre outros.</p>
+                        <br>
+                        <h3>Tinta Esmalte Sintético Reciclada 20 Litros</h3>
+                        <p><b>Qtd. Mínima:</b> 1 unidade(s)</p>
+                    </div>
+                    <div class="adicionar">COMPRAR</div>
+                </div>
+            </div>
+        </div>
+        <div id="titulo"><h2>Veja Outros Produtos</h2></div>
+        <div id="mais_produtos">
+            
+            <div id="box_mais_produtos">
+                <div class="caixa" id="caixa1">
+                    <div class="img_produto"><img src="imagens/lata_tinta_azul.png" alt="tinta_azul"></div>
+                    <div class="infos_mais_produtos">
+                        <div>Tinta Reciclada 20L</div>
+                        <div>Qtd. Mínima 1 Unidade.</div>
+                    </div>
+                    <div class="adicionar_mais_produtos"><div>COMPRAR</div></div>
+                </div>
+                <div class="caixa" id="caixa2">
+                    <div class="img_produto"><img src="imagens/lata_tinta_amarelo.png" alt="lata_amarela"></div>
+                    <div class="infos_mais_produtos">
+                        <div>Thinner Formulado 20L</div>
+                        <div>Qtd. Mínima 1 Unidade.</div>
+                    </div>
+                    <div class="adicionar_mais_produtos"><div>COMPRAR</div></div>
+                </div>
+                <div class="caixa" id="caixa3">
+                    <div class="img_produto"><img src="imagens/lata_tinta_azul.png" alt="tinta_azul"></div>
+                    <div class="infos_mais_produtos">
+                        <div>Tinta Reciclada 20L</div>
+                        <div>Qtd. Mínima 1 Unidade.</div>
+                    </div>
+                    <div class="adicionar_mais_produtos"><div>COMPRAR</div></div>
+                </div>
+                <div class="caixa" id="caixa4">
+                    <div class="img_produto"><img src="imagens/lata_tinta_amarelo.png" alt="lata_amarela"></div>
+                    <div class="infos_mais_produtos">
+                        <div>Thinner Formulado 20L</div>
+                        <div>Qtd. Mínima 1 Unidade.</div>
+                    </div>
+                    <div class="adicionar_mais_produtos"><div>COMPRAR</div></div>
+                </div>
+            </div>
+        </div>
+
+
+        <!--Rodapé de contato-->
+        <div class="box" id="box6">
+            <div id="contato_box6">
+                <div><img src="imagens/Logo_tintarte.png" alt="logo"></div>
+                <div>
+                    <b></b>
+                    <b>Atendimento</b><br>
+                    <br>📞 Telefone fixo: (11) 3456-7890 <br>💬 WhatsApp: (11) 91234-5678 <br>📧 E-mail: contato@tintarte.com.br
+                    <br><br>
+                    <b>Localização</b><br>
+                    <br>Tintarte Tintas & Arte <br>Av. das Cores, 1234 – Bairro Paleta <br>Cidade Criativa – SP, 01234-567 <br>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById("botao_tintas_exclusivas").addEventListener("click", function() {window.location.href = "https://thiagoreinecke7.github.io/site-loja-tintas/index.html";})
+        document.getElementById("botao_contato").addEventListener("click", function() {window.location.href = "https://thiagoreinecke7.github.io/site-loja-tintas/contato.html";})
+        document.getElementById("botao_institucional").addEventListener("click", function() {window.location.href = "https://thiagoreinecke7.github.io/site-loja-tintas/institucional.html";})
+        document.querySelectorAll(".caixa").forEach(function (botao) {botao.addEventListener("click", function() {window.location.href = "https://thiagoreinecke7.github.io/site-loja-tintas/produto.html"})})
+
+
+    </script>
+
+    
+</body>
+</html>
