@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        #opcoes :nth-child(4){
+            background-color: rgba(43, 43, 243, 0.8);
+            color: white;
+        }
+        .layout_principal{
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        textarea{
+            width: 100%;
+            border-radius: 5px;
+        }
+        input, select{
+            border-radius: 5px;
+            font-size: 16px;
+            
+        }
+        #botao{
+            display: flex;
+            justify-content: center;   
+        }
+        .box{
+            position: fixed;
+            bottom: 0;
+        }
+
+        #box6{
+            display: flex;
+            justify-content: center;
+            background-color: rgba(77, 88, 252, 0.5);
+            width: 100%;
+        }
+
+    </style>
+
+</head>
+<body>
+    <!--Definindo o cabeçalho e menu-->
+    <div id="menu_cabecalho">
+        <div id="logo"><img src="imagens/Logo_tintarte.png" alt="logo_tintarte"></div>
+        <div id="icones">
+            <div id="whats"><a href="https://web.whatsapp.com/"><img src="imagens/logo_whats.png" alt="logo_whats"></a></div>
+            <div id="carrinho"><img src="imagens/Carrinho.png" alt="carrinho"></div>
+        </div>
+        <div id="opcoes">
+            <div id="botao_tintas_exclusivas">Tintas Exclusivas</div>
+            <div id="botao_institucional">Institucional</div>
+            <div>Produtos</div>
+            <div>Contato</div>
+        </div>
+    </div>
+
+    <!--Definindo o Layout-->
+    <div class="layout_principal">
+        <hr>
+        <h1>Entre em Contato</h1>
+        <hr>
+        <p>Preencha o formulário abaixo e entraremos em contato o mais breve possível.</p>
+        <form action="">
+            <label for="nome">Nome *</label>
+            <input type="text" id="nome" placeholder="Digite seu nome" required>
+            <label for="email">E-mail *</label>
+            <input type="text" id="email" placeholder="Digite seu e-mail" required><br><br>
+            <label for="assunto">Assunto</label>
+            <input type="text" id="assunto" placeholder="Digite o assunto">
+            <label for="estado">Estado</label>
+            <select name="estado" id="estado">
+                <option value="" selected disabled>Selecione seu Estado</option>
+                <option value="AC">Acre</option>
+                <option value="AL">Alagoas</option>
+                <option value="AP">Amapá</option>
+                <option value="AM">Amazonas</option>
+                <option value="BA">Bahia</option>
+                <option value="CE">Ceará</option>
+                <option value="DF">Distrito Federal</option>
+                <option value="ES">Espírito Santo</option>
+                <option value="GO">Goiás</option>
+                <option value="MA">Maranhão</option>
+                <option value="MT">Mato Grosso</option>
+                <option value="MS">Mato Grosso do Sul</option>
+                <option value="MG">Minas Gerais</option>
+                <option value="PA">Pará</option>
+                <option value="PB">Paraíba</option>
+                <option value="PR">Paraná</option>
+                <option value="PE">Pernambuco</option>
+                <option value="PI">Piauí</option>
+                <option value="RJ">Rio de Janeiro</option>
+                <option value="RN">Rio Grande do Norte</option>
+                <option value="RS">Rio Grande do Sul</option>
+                <option value="RO">Rondônia</option>
+                <option value="RR">Roraima</option>
+                <option value="SC">Santa Catarina</option>
+                <option value="SP">São Paulo</option>
+                <option value="SE">Sergipe</option>
+                <option value="TO">Tocantins</option>
+            </select><br><br>
+            <label for="mensagem">Mensagem:</label><br>
+            <textarea name="mensagem" id="mensagem" placeholder="Digite sua mensagem." rows="10"></textarea><br>
+            <div id="botao">
+                <button type="submit">Enviar</button>
+            </div>
+            <br>
+        </form>
+        <hr>
+
+    
+
+
+        <!--Rodapé de contato-->
+        <div class="box" id="box6">
+            <div id="contato_box6">
+                <div><img src="imagens/Logo_tintarte.png" alt="logo"></div>
+                <div>
+                    <b></b>
+                    <b>Atendimento</b><br>
+                    <br>📞 Telefone fixo: (11) 3456-7890 <br>💬 WhatsApp: (11) 91234-5678 <br>📧 E-mail: contato@tintarte.com.br
+                    <br><br>
+                    <b>Localização</b><br>
+                    <br>Tintarte Tintas & Arte <br>Av. das Cores, 1234 – Bairro Paleta <br>Cidade Criativa – SP, 01234-567 <br>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        document.getElementById("botao_tintas_exclusivas").addEventListener("click", function() {window.location.href = "https://thiagoreinecke7.github.io/site-loja-tintas/index.html";})
+        document.getElementById("botao_institucional").addEventListener("click", function() {window.location.href = "https://thiagoreinecke7.github.io/site-loja-tintas/institucional.html";})
+
+    </script>
+</body>
+</html>
