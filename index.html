@@ -5,82 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tintarte - Home</title>
 
+    <link rel="stylesheet" href="style.css">
+
     <style>
-        body{
-            margin: 0;
-            padding: 0;
-            overflow-x: hidden;
-        }
-        #menu_cabecalho{
-            position: fixed;
-            display: flex;
-            top: 0;
-            width: 100%;
-            height: 100px;
-            border-bottom: 3px solid rgb(23, 27, 248);
-            box-shadow: 0 0 20px 0px black;
-            justify-content: center;
-            z-index: 5;
-            background-color: white;
-        }
-        #logo{
-            display: flex;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 20%;
-            height: 100px;
-        }
-        #icones{
-            position: fixed;
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-            top: 0;
-            right: 0;
-            width: 20%;
-            height: 100px;
-        }
-        #logo>img{
-            margin: auto;
-            width: 120px;
-            height: 97px;
-        }
-        #opcoes{
-            width: 60%;
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-        }
         #opcoes :nth-child(1){
             background-color: rgba(43, 43, 243, 0.8);
             color: white;
         }
-        #opcoes>div{
-            border-radius: 10px;
-            padding: 5px;
-            font-weight: bold
-        }
-        #opcoes>div:hover{
-            background-color: rgba(43, 43, 243, 0.8);
-            color: white;
-            cursor: pointer;
-        }
-        #icones>div>img{
-            height: 70%;
-            width: 70%;
-            cursor: pointer;
-        }
-        .layout_principal{
-            position: relative;
-            display: flex;
-            top: 120px;
-            width: 100%;
-            height: 100%;
-            z-index: 1;
-            background-color: white;
-            justify-content: center;
-        }
+
+        /*Definindo o layout*/
         .container{
             display: grid;
             grid-template-areas: 
@@ -130,6 +63,8 @@
             background-color: rgba(77, 88, 252, 0.5);
             width: 100%;
         }
+
+        /*Configurando o Banner*/
         #container_banner{
             display: flex;
             height: 400px;
@@ -155,6 +90,8 @@
             box-shadow: 0 0 15px 0 black;
             z-index: 5;
         }
+
+        /*Fazendo animação do pincel*/
         #tinta_pincel{
             height: 20px;
             background: linear-gradient(to bottom, green, rgb(36, 204, 21));
@@ -182,6 +119,8 @@
                 opacity: 0;
             }
         }
+
+        /*Configurando a grid dos produtos*/
         .produtos{
             width: 920px;
             display: grid;
@@ -242,6 +181,7 @@
             font-size: small;
         }
         
+        /*Configurando as notícias*/
         .container_noticia{
             width: 920px;
             display: grid;
@@ -273,43 +213,32 @@
             width: 260px;
             height: 360px;
         }
-        #contato_box6{
-            width: 920px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        #contato_box6 :first-child{
-            display: flex;
-            justify-content: space-around;
-            height: 97%;
-            width: 50%;
-            border-radius: 50%;
-        }
-        #contato_box6 :nth-child(2){
-            text-align: center;
-            width: 50%;
-        }
+
         
     </style>
 
 </head>
 <body>
+    <!--Definindo o cabeçalho e menu-->
     <div id="menu_cabecalho">
         <div id="logo"><img src="imagens/Logo_tintarte.png" alt="logo_tintarte"></div>
         <div id="icones">
-            <div id="whats"><img src="imagens/logo_whats.png" alt="logo_whats"></div>
+            <div id="whats"><a href="https://web.whatsapp.com/"><img src="imagens/logo_whats.png" alt="logo_whats"></a></div>
             <div id="carrinho"><img src="imagens/Carrinho.png" alt="carrinho"></div>
         </div>
         <div id="opcoes">
             <div>Tintas Exclusivas</div>
-            <div>Institucional</div>
+            <div id="botao_institucional">Institucional</div>
             <div>Produtos</div>
             <div>Contato</div>
         </div>
     </div>
+
+    <!--Gerando o layout da página principal-->
     <div class="layout_principal">
         <div class="container">
+
+            <!--Banner-->
             <div class="box" id="box1">
                 <div id="container_banner">
                     <div class="imagens_banner">
@@ -323,10 +252,14 @@
                     </div>
                 </div>
             </div>
+
+            <!--Animação do pincel-->
             <div class="box" id="box2">
                 <div id="tinta_pincel"></div>
                 <div id="pincel"><img id="pincel" src="imagens/pincel.png" alt="pincel"></div>
             </div>
+
+            <!--Campo dos produtos exclusivos-->
             <div id="titulo_produto">
                 <div><h1>Conheça Nossos Produtos Exclusivos</h1></div>
             </div>
@@ -398,6 +331,8 @@
                     </div>
                 </div>
             </div>
+
+            <!--Aba de notícias-->
             <div class="box" id="box4">
                 <div><h1>Confira as Últimas Notícias de Tintas no Brasil</h1></div>
             </div>
@@ -426,6 +361,8 @@
                     </div>
                 </div>
             </div>
+
+            <!--Rodapé de contato-->
             <div class="box" id="box6">
                 <div id="contato_box6">
                     <div><img src="imagens/Logo_tintarte.png" alt="logo"></div>
@@ -442,6 +379,9 @@
         </div>
     </div>
 
+    <script>
+        document.getElementById("botao_institucional").addEventListener("click", function() {window.location.href = "https://thiagoreinecke7.github.io/site-loja-tintas/institucional.html";})
+    </script>
     
 </body>
 </html>

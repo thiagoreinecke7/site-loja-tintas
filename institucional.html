@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Institucional</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        #opcoes :nth-child(2){
+            background-color: rgba(43, 43, 243, 0.8);
+            color: white;
+        }
+        .layout_principal{
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+       
+        #historia{
+            width: 100svw;
+            height: 500px;
+            margin-bottom: 20px;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+        }
+        #texto{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+            width: 613.33px;
+            height: 100%;
+        }
+        #texto div{
+            padding: 15px;
+            text-align: center;
+        }
+        #botao{
+            font-weight: bold;
+            border-radius: 10px;
+            width: 200px;
+            background-color: green;
+            color: white;
+            box-shadow: 0 0 10px 0 black;
+            transition: all 0.5s ease;
+            cursor: pointer;
+        }
+        #botao:hover{
+            padding: 20px;
+            background-color: rgb(26, 179, 26);
+        }
+        #fotos{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-direction: column;
+            width: 306.67px;
+            height: 100%;
+        }
+        #fotos img{
+            width: 100%;
+            height: 49%;
+            border-radius: 10px;
+            box-shadow: 0 0 10px 0 black;
+        }
+        #valores{
+            background-color: rgb(212, 212, 212);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 100vw;
+            padding: 30px 0 30px 0;
+        }
+        #valores>div{
+            width: 920px;
+            text-align: center;
+        }
+        #valores :nth-child(2){
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .box_valores{
+            width: 80%;
+            height: 300px;
+            margin: 30px 15px;
+            padding: 15px;
+            border-radius: 30px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 0 10px 0 black;
+            transition: all 0.5s ease;
+        }
+        .box_valores:hover{
+            margin-top: 5px;
+        }
+        #missao{
+            background-color: rgb(151, 252, 151);
+        }
+        #visao{
+            background-color: rgb(141, 141, 252);
+        }
+        #valores_box{
+            background-color: rgb(252, 209, 128);
+        }
+        #box6{
+            display: flex;
+            justify-content: center;
+            background-color: rgba(77, 88, 252, 0.5);
+            width: 100%;
+        }
+
+
+    </style>
+
+</head>
+<body>
+    <!--Definindo o cabeçalho e menu-->
+    <div id="menu_cabecalho">
+        <div id="logo"><img src="imagens/Logo_tintarte.png" alt="logo_tintarte"></div>
+        <div id="icones">
+            <div id="whats"><a href="https://web.whatsapp.com/"><img src="imagens/logo_whats.png" alt="logo_whats"></a></div>
+            <div id="carrinho"><img src="imagens/Carrinho.png" alt="carrinho"></div>
+        </div>
+        <div id="opcoes">
+            <div id="botao_tintas_exclusivas">Tintas Exclusivas</div>
+            <div>Institucional</div>
+            <div>Produtos</div>
+            <div>Contato</div>
+        </div>
+    </div>
+
+    <!--Definindo layout-->
+    <div class="layout_principal">
+        <div id="historia">
+            <div id="texto">
+                <div>
+                    <h1>Institucional Tintarte</h1>
+                    <p>A TintArte é uma empresa fictícia fundada em 2018 com o objetivo de inovar o mercado de tintas por meio do e-commerce. Criada por três amigos apaixonados por arte e tecnologia, a empresa surgiu da necessidade de oferecer uma experiência de compra mais prática, com variedade e qualidade. No início, operava apenas com tintas acrílicas, mas logo expandiu seu catálogo para atender tanto profissionais quanto hobbystas. Seu diferencial sempre foi o atendimento personalizado e a entrega rápida. Com o tempo, a TintArte conquistou espaço nas redes sociais e se tornou referência no segmento. Hoje, é reconhecida pela curadoria de produtos, pelas parcerias com marcas renomadas e pelo suporte técnico online. A empresa continua crescendo e investindo em tecnologia para facilitar ainda mais a escolha da tinta ideal. Seu lema é claro: "Colorir com arte e praticidade".</p>
+                </div>
+                <div id="botao">Fale Conosco</div>
+            </div>
+            <div id="fotos">
+                <img src="imagens/img_tintas1.jpg" alt="imagem1">
+                <img src="imagens/img_tintas2.jfif" alt="imagem2">
+            </div>
+        </div>
+        <div id="valores">
+            <div>
+                <h1>Sobre nossa Missão, Visão, e Valores</h1>
+            </div>
+            <div id="cor_valores">
+                <div class="box_valores" id="missao">
+                    <h2>Missão</h2>
+                    <p>Oferecer tintas de alta qualidade por meio de uma plataforma digital prática, segura e acessível.Buscamos inspirar criatividade e facilitar a vida de nossos clientes com atendimento especializado. Nosso compromisso é entregar soluções completas para pintura, decoração e expressão artística. Valorizamos a experiência do cliente em cada etapa da jornada de compra. Colorir o mundo com inovação é o nosso propósito diário.</p>
+                </div>
+                <div class="box_valores" id="visao">
+                    <h2>Visão</h2>
+                    <p>Ser a principal referência nacional em venda de tintas online até 2030. Desejamos transformar a forma como as pessoas escolhem, compram e usam tintas. Queremos unir tecnologia, design e sustentabilidade em cada produto e serviço. Expandir nosso portfólio e atuar em toda a cadeia criativa é um dos nossos objetivos. Ser lembrada como a marca que leva cor, arte e praticidade a todos os cantos do país.</p>
+                </div>
+                <div class="box_valores" id="valores_box">
+                    <h2>Valores</h2>
+                    <p>Inovação constante no atendimento e na experiência digital. Compromisso com a qualidade e a satisfação do cliente. Respeito ao meio ambiente e uso consciente de recursos. Transparência, ética e responsabilidade nas relações. Estímulo à criatividade, diversidade e expressão artística.</p>
+                </div>
+            </div>
+        </div>
+        <!--Rodapé de contato-->
+        <div class="box" id="box6">
+            <div id="contato_box6">
+                <div><img src="imagens/Logo_tintarte.png" alt="logo"></div>
+                <div>
+                    <b></b>
+                    <b>Atendimento</b><br>
+                    <br>📞 Telefone fixo: (11) 3456-7890 <br>💬 WhatsApp: (11) 91234-5678 <br>📧 E-mail: contato@tintarte.com.br
+                    <br><br>
+                    <b>Localização</b><br>
+                    <br>Tintarte Tintas & Arte <br>Av. das Cores, 1234 – Bairro Paleta <br>Cidade Criativa – SP, 01234-567 <br>
+                </div>
+            </div>
+        </div>
+        
+        
+    </div>
+
+    <script>
+        document.getElementById("botao_tintas_exclusivas").addEventListener("click", function() {window.location.href = "https://thiagoreinecke7.github.io/site-loja-tintas/index.html";})
+        document.getElementById("botao").addEventListener("click", function() {window.location.href = "https://web.whatsapp.com/";})
+    </script>
+
+</body>
+</html>
