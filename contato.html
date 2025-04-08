@@ -14,8 +14,9 @@
         }
         .layout_principal{
             flex-direction: column;
-            justify-content: center;
             align-items: center;
+            justify-content: space-between;
+            height: calc(100vh - 120px);
         }
         textarea{
             width: 100%;
@@ -24,15 +25,13 @@
         input, select{
             border-radius: 5px;
             font-size: 16px;
-            
         }
         #botao{
             display: flex;
             justify-content: center;   
         }
-        .box{
-            position: fixed;
-            bottom: 0;
+        #contato{
+            text-align: center;
         }
 
         #box6{
@@ -63,59 +62,58 @@
 
     <!--Definindo o Layout-->
     <div class="layout_principal">
-        <hr>
-        <h1>Entre em Contato</h1>
-        <hr>
-        <p>Preencha o formulário abaixo e entraremos em contato o mais breve possível.</p>
-        <form action="">
-            <label for="nome">Nome *</label>
-            <input type="text" id="nome" placeholder="Digite seu nome" required>
-            <label for="email">E-mail *</label>
-            <input type="text" id="email" placeholder="Digite seu e-mail" required><br><br>
-            <label for="assunto">Assunto</label>
-            <input type="text" id="assunto" placeholder="Digite o assunto">
-            <label for="estado">Estado</label>
-            <select name="estado" id="estado">
-                <option value="" selected disabled>Selecione seu Estado</option>
-                <option value="AC">Acre</option>
-                <option value="AL">Alagoas</option>
-                <option value="AP">Amapá</option>
-                <option value="AM">Amazonas</option>
-                <option value="BA">Bahia</option>
-                <option value="CE">Ceará</option>
-                <option value="DF">Distrito Federal</option>
-                <option value="ES">Espírito Santo</option>
-                <option value="GO">Goiás</option>
-                <option value="MA">Maranhão</option>
-                <option value="MT">Mato Grosso</option>
-                <option value="MS">Mato Grosso do Sul</option>
-                <option value="MG">Minas Gerais</option>
-                <option value="PA">Pará</option>
-                <option value="PB">Paraíba</option>
-                <option value="PR">Paraná</option>
-                <option value="PE">Pernambuco</option>
-                <option value="PI">Piauí</option>
-                <option value="RJ">Rio de Janeiro</option>
-                <option value="RN">Rio Grande do Norte</option>
-                <option value="RS">Rio Grande do Sul</option>
-                <option value="RO">Rondônia</option>
-                <option value="RR">Roraima</option>
-                <option value="SC">Santa Catarina</option>
-                <option value="SP">São Paulo</option>
-                <option value="SE">Sergipe</option>
-                <option value="TO">Tocantins</option>
-            </select><br><br>
-            <label for="mensagem">Mensagem:</label><br>
-            <textarea name="mensagem" id="mensagem" placeholder="Digite sua mensagem." rows="10"></textarea><br>
-            <div id="botao">
-                <button type="submit">Enviar</button>
-            </div>
-            <br>
-        </form>
-        <hr>
-
-    
-
+        <div id="contato">
+            <hr>
+            <h1>Entre em Contato</h1>
+            <hr>
+            <p>Preencha o formulário abaixo e entraremos em contato o mais breve possível.</p>
+            <form action="">
+                <label for="nome">Nome *</label>
+                <input type="text" id="nome" placeholder="Digite seu nome" required>
+                <label for="email">E-mail *</label>
+                <input type="text" id="email" placeholder="Digite seu e-mail" required><br><br>
+                <label for="assunto">Assunto</label>
+                <input type="text" id="assunto" placeholder="Digite o assunto">
+                <label for="estado">Estado</label>
+                <select name="estado" id="estado">
+                    <option value="" selected disabled>Selecione seu Estado</option>
+                    <option value="AC">Acre</option>
+                    <option value="AL">Alagoas</option>
+                    <option value="AP">Amapá</option>
+                    <option value="AM">Amazonas</option>
+                    <option value="BA">Bahia</option>
+                    <option value="CE">Ceará</option>
+                    <option value="DF">Distrito Federal</option>
+                    <option value="ES">Espírito Santo</option>
+                    <option value="GO">Goiás</option>
+                    <option value="MA">Maranhão</option>
+                    <option value="MT">Mato Grosso</option>
+                    <option value="MS">Mato Grosso do Sul</option>
+                    <option value="MG">Minas Gerais</option>
+                    <option value="PA">Pará</option>
+                    <option value="PB">Paraíba</option>
+                    <option value="PR">Paraná</option>
+                    <option value="PE">Pernambuco</option>
+                    <option value="PI">Piauí</option>
+                    <option value="RJ">Rio de Janeiro</option>
+                    <option value="RN">Rio Grande do Norte</option>
+                    <option value="RS">Rio Grande do Sul</option>
+                    <option value="RO">Rondônia</option>
+                    <option value="RR">Roraima</option>
+                    <option value="SC">Santa Catarina</option>
+                    <option value="SP">São Paulo</option>
+                    <option value="SE">Sergipe</option>
+                    <option value="TO">Tocantins</option>
+                </select><br><br>
+                <label for="mensagem">Mensagem:</label><br>
+                <textarea name="mensagem" id="mensagem" placeholder="Digite sua mensagem." rows="10"></textarea><br>
+                <div id="botao">
+                    <button type="submit">Enviar</button>
+                </div>
+                <br>
+            </form>
+            <hr>
+        </div>
 
         <!--Rodapé de contato-->
         <div class="box" id="box6">
