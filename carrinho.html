@@ -3,21 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contato</title>
+    <title>Carrinho</title>
 
     <link rel="stylesheet" href="style.css">
 
     <style>
-        #opcoes :nth-child(4){
-            background-color: rgba(43, 43, 243, 0.8);
-            color: white;
-        }
         .layout_principal{
             flex-direction: column;
             align-items: center;
             justify-content: space-between;
-            height: calc(100vh - 120px);
+            height: calc(100svh - 120px);
         }
+        #carrinho_caixa{
+            text-align: center;
+            width: 920px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .itens{
+            display: flex;
+            height: 150px;
+            width: 600px;
+            justify-content: space-around;
+            align-items: center;
+            margin: 5px;
+            border-radius: 20px;
+            background-color: gainsboro;
+        }
+        .foto_item{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 140px;
+            height: 140px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px 0 black;
+            background-color: white;
+        }
+        .foto_item img{
+            width: 80%;
+            height: 80%;
+        }
+        .infos :first-child{
+            font-weight: bold;
+            font-size: large;
+            margin-bottom: 10px;
+        }
+
+
         textarea{
             width: 100%;
             border-radius: 5px;
@@ -28,21 +62,23 @@
         }
         #botao{
             display: flex;
-            justify-content: center;   
+            justify-content: center;  
+        }
+        button{
+            cursor: pointer;
         }
         #contato{
             text-align: center;
         }
-
+        
         #box6{
             display: flex;
             justify-content: center;
             background-color: rgba(77, 88, 252, 0.5);
-            width: 100%;
+            width: 100svw;
         }
 
     </style>
-
 </head>
 <body>
     <!--Definindo o cabeçalho e menu-->
@@ -50,23 +86,51 @@
         <div id="logo"><img src="imagens/Logo_tintarte.png" alt="logo_tintarte"></div>
         <div id="icones">
             <div id="whats"><a href="https://web.whatsapp.com/"><img src="imagens/logo_whats.png" alt="logo_whats"></a></div>
-            <div id="carrinho"><a href="https://thiagoreinecke7.github.io/site-loja-tintas/carrinho.html"><img src="imagens/Carrinho.png" alt="carrinho"></a></div>
+            <div id="carrinho"><img src="imagens/Carrinho.png" alt="carrinho"></div>
         </div>
         <div id="opcoes">
             <div id="botao_tintas_exclusivas">Tintas Exclusivas</div>
             <div id="botao_institucional">Institucional</div>
             <div id="botao_produtos">Produtos</div>
-            <div>Contato</div>
+            <div id="botao_contato">Contato</div>
         </div>
     </div>
 
-    <!--Definindo o Layout-->
     <div class="layout_principal">
-        <div id="contato">
-            <hr>
-            <h1>Entre em Contato</h1>
-            <hr>
-            <p>Preencha o formulário abaixo e entraremos em contato o mais breve possível.</p>
+        <div id="box_carrinho">
+            <div id="carrinho_caixa">
+                <div>
+                    <h1>Seu Carrinho</h1>
+                </div>
+                <div id="itens_carrinho">
+                    <div class="itens">
+                        <div class="foto_item"><img src="imagens/lata_tinta_azul.png" alt="tinta_azul"></div>
+                        <div class="infos">
+                            <div>Tinta Esmalte Sintético Reciclada 20 Litros</div>
+                            <div><b>Qtd. Adicionada: 5</b></div>
+                        </div>
+                    </div>
+                    <div class="itens">
+                        <div class="foto_item"><img src="imagens/lata_tinta_amarelo.png" alt="lata_tinta_amarelo"></div>
+                        <div class="infos">
+                            <div>Tinta Esmalte Sintético Reciclada 20 Litros</div>
+                            <div><b>Qtd. Adicionada: 10</b></div>
+                        </div>
+                    </div>
+                    <div class="itens">
+                        <div class="foto_item"><img src="imagens/lata_tinta_azul.png" alt="tinta_azul"></div>
+                        <div class="infos">
+                            <div>Tinta Esmalte Sintético Reciclada 20 Litros</div>
+                            <div><b>Qtd. Adicionada: 15</b></div>
+                        </div>
+                    </div>
+                </div>
+            
+            </div>
+        </div>
+
+        <hr>
+            <p>Preencha o formulário abaixo para finalizar o orçamento.</p>
             <form action="">
                 <label for="nome">Nome *</label>
                 <input type="text" id="nome" placeholder="Digite seu nome" required>
@@ -105,15 +169,14 @@
                     <option value="SE">Sergipe</option>
                     <option value="TO">Tocantins</option>
                 </select><br><br>
-                <label for="mensagem">Mensagem:</label><br>
+                <label for="mensagem">Observações:</label><br>
                 <textarea name="mensagem" id="mensagem" placeholder="Digite sua mensagem." rows="10"></textarea><br>
                 <div id="botao">
-                    <button type="submit">Enviar</button>
+                    <button type="submit">Enviar Orçamento</button>
                 </div>
                 <br>
             </form>
             <hr>
-        </div>
 
         <!--Rodapé de contato-->
         <div class="box" id="box6">
@@ -129,14 +192,14 @@
                 </div>
             </div>
         </div>
-
     </div>
 
     <script>
         document.getElementById("botao_tintas_exclusivas").addEventListener("click", function() {window.location.href = "https://thiagoreinecke7.github.io/site-loja-tintas/index.html";})
+        document.getElementById("botao_contato").addEventListener("click", function() {window.location.href = "https://thiagoreinecke7.github.io/site-loja-tintas/contato.html";})
         document.getElementById("botao_institucional").addEventListener("click", function() {window.location.href = "https://thiagoreinecke7.github.io/site-loja-tintas/institucional.html";})
-        document.getElementById("botao_produtos").addEventListener("click", function() {window.location.href = "https://thiagoreinecke7.github.io/site-loja-tintas/institucional.html";})
-
-    </script>
+        document.getElementById("botao_produtos").addEventListener("click", function() {window.location.href = "https://thiagoreinecke7.github.io/site-loja-tintas/produtos.html";})
+        document.querySelectorAll(".box_produtos").forEach(function (botao) {botao.addEventListener("click", function() {window.location.href = "https://thiagoreinecke7.github.io/site-loja-tintas/produto.html"})})
+    </script>    
 </body>
 </html>
